@@ -3,7 +3,7 @@ pipeline {
     docker { image 'golang:latest' }
   }
   environment {
-    GOCACHE = "${WORKSPACE}/go-cache" // Set the cache directory within the Jenkins workspace
+    GOCACHE = '/var/cache/go-build'  // Use a directory where Jenkins has write permissions within the container
   }
   stages {
     stage('Test') {
