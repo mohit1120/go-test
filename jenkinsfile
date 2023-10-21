@@ -1,9 +1,9 @@
 pipeline {
   agent {
-    docker {
-      image 'golang:latest'
-      args '-v /host/cache:/root/.cache'
-    }
+    docker { image 'golang:latest' }
+  }
+  environment {
+    GOCACHE = "${WORKSPACE}/go-cache" // Set the cache directory within the Jenkins workspace
   }
   stages {
     stage('Test') {
