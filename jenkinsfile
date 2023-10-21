@@ -1,0 +1,12 @@
+pipeline {
+  agent {
+    docker { image 'go:1.21-alpine' }
+  }
+  stages {
+    stage('Test') {
+      steps {
+        sh 'go version'
+      }
+    }
+  }
+}
