@@ -1,5 +1,5 @@
 package check
 
-func check(a string, b string) bool {
+func Check(a string, b string) bool {
 	return a == b
 }
