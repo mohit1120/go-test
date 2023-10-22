@@ -2,14 +2,10 @@ pipeline {
   agent {
     docker { image 'golang:latest' }
   }
-  environment {
-    GOCACHE = '/var/cache/go-build'  // Use a directory where Jenkins has write permissions within the container
-  }
   stages {
     stage('Test') {
       steps {
         sh 'go version'
-        sh 'go run main.go'
       }
     }
   }

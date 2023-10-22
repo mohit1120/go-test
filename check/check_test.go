@@ -9,11 +9,11 @@ import (
 func TestCheck(t *testing.T) {
 	var a = "abc"
 	var b = "abc"
-	var c = check(a, b)
+	var c = Check(a, b)
 	assert.Equal(t, c, true)
 
 	a = "abc"
 	b = "bc"
-	c = check(a, b)
+	c = Check(a, b)
 	assert.Equal(t, c, false)
 }
